@@ -1,0 +1,44 @@
+---
+title: "My writeup"
+author: "Leela Downward"
+date: "2026-10-16"
+output: 
+  prettydoc::html_pretty:
+    theme: hpstr
+---
+
+```{r setup, include=TRUE}
+librarian::shelf(kableExtra)
+librarian::shelf(knitr)
+
+library(knitr)
+my_trauma <-data.frame(
+  Loading.Stage = c("looking around", "downloading github", "linking r and github"),
+  Time = c(10,5,20),
+  Emotion = c("sad", "triumphant", "frustrated")
+)
+kable(
+  my_trauma,
+  col.names = c("Loading stage", "Time Taken", "Predominant emotion felt"),
+  caption = "My experience trying to download and use github")
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
